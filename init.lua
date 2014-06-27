@@ -8,8 +8,6 @@ minetest.register_chatcommand("morrer", {
     func = function(name, param)
         local player = minetest.get_player_by_name(name)
         local invref = player:get_inventory()
-        local invmain = invref:is_empty("main")
-        local invcraft = invref:is_empty("craft")
         if invref:is_empty("main") then
             if invref:is_empty("craft") then
                 player:setpos(spawn)
